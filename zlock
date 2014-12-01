@@ -1,0 +1,21 @@
+import argparse
+
+
+parser = argparse.ArgumentParser(description='Manage Zookeeper locks from shell scripts.')
+
+# zlock [-sxon] [-w timeout] lockfile [-c] command...
+#       -s, --shared          Obtain a shared lock, sometimes called a read lock.
+#       -x, -e, --exclusive
+#              Obtain an exclusive lock, sometimes called a write lock.  This is the default.
+#       -u, --unlock          Drop  a lock
+#       -n, --nb, --nonblock
+#              Fail (with an exit code of 1) rather than wait if the lock cannot be immediately acquired.
+#       -w, --wait, --timeout seconds
+#              Fail (with an exit code of 1) if the lock cannot be acquired within seconds seconds.  Decimal fractional values are allowed.
+#       -o, --close
+#              Close the file descriptor on which the lock is held before executing command.  This is useful if command spawns a child process which should not be holding the lock.
+#       -c, --command command
+#              Pass a single command to the shell with -c.
+#       -h, --help
+#              Print a help message.
+
